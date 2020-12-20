@@ -1,4 +1,1 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <variables></variables>
-  <block type="pxt-on-start" x="0" y="0"></block>
-</xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" x="20" y="20"><statement name="HANDLER"><block type="tilemap_editor"><field name="tilemap">tilemap`level`</field></block></statement></block><block type="gameinterval" x="330" y="20"><value name="period"><shadow type="timePicker"><field name="ms">500</field></shadow></value><statement name="HANDLER"><block type="Image_flipY"><next><block type="Image_flipX"/></next></block></statement></block></xml>

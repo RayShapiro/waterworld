@@ -1,19 +1,21 @@
 {
-    "name": "waterworld",
-    "version": "0.0.0",
+    "name": "shark",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "files": [
-        "README.md",
         "main.blocks",
-        "main.ts"
+        "main.ts",
+        "README.md",
+        "main.py",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
-    "public": true,
     "targetVersions": {
         "target": "1.2.16",
         "targetId": "arcade"
@@ -21,5 +23,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "pyprj"
 }
