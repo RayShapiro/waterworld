@@ -1,3 +1,7 @@
+# Global declarations
+my_sprite: Sprite = None
+my_tiles: List[Image] = []
+
 #
 # left,right buttons, flip images and set velocity for direction
 #
@@ -9,7 +13,7 @@ def on_player1_button_right_pressed():
     else:
         my_flipped = True
     my_sprite.set_velocity(15, 0)
-    for t in mytiles:
+    for t in my_tiles:
         t.flip_x()
 
 controller.player1.on_button_event(ControllerButton.RIGHT,
@@ -23,7 +27,7 @@ def on_player1_button_left_pressed():
     else:
         my_flipped = False
     my_sprite.set_velocity(-15, 0)
-    for s in mytiles:
+    for s in my_tiles:
         s.flip_x()
 controller.player1.on_button_event(ControllerButton.LEFT,
     ControllerButtonEvent.PRESSED,
@@ -31,14 +35,13 @@ controller.player1.on_button_event(ControllerButton.LEFT,
 
 #left looking shark is not flipped - my_flipped == False
 my_flipped = False
-my_sprite: Sprite = None
-mytiles: List[Image] = []
+
 tiles.set_tilemap(tilemap("""
     level
 """))
 
 # load shark images to tile array
-mytiles = [sprites.builtin.shark0,
+my_tiles = [sprites.builtin.shark0,
     sprites.builtin.shark1,
     sprites.builtin.shark2,
     sprites.builtin.shark3]
@@ -52,7 +55,7 @@ controller.move_sprite(my_sprite, 0)
 my_sprite.set_velocity(-15, 0)
 
 # animate
-animation.run_image_animation(my_sprite, mytiles, 300, True)
+animation.run_image_animation(my_sprite, my_tiles, 300, True)
 
 # animate water
 def on_update_interval():
